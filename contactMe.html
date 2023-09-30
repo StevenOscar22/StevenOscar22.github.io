@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gradient-to-r from-slate-600 to-slate-800">
+    <!-- Navbar start -->
+    <div class="flex justify-between align-center px-7 py-3">
+      <div>
+        <button>
+          <h1
+            class="hover:text-slate-300 duration-150 ease-in-out text-xl font-semibold"
+          >
+            My Portfolio
+          </h1>
+        </button>
+      </div>
+      <div>
+        <ul class="flex gap-7">
+          <li class="hover:text-blue-300 ease-in-out duration-150">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="hover:text-blue-300 ease-in-out duration-150">
+            <a href="about.html">About</a>
+          </li>
+          <li class="hover:text-blue-300 ease-in-out duration-150 underline underline-offset-[4px] text-blue-300">
+            <a href="contactMe.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Contact Me form start -->
+    <div class="flex flex-col justify-center items-center min-h-screen">
+      <div class="max-w-lg m-auto px-[1em]">
+      <div>
+        <h1 class="text-3xl contact-me-title text-center mb-10">Contact Me</h1>
+      </div>
+        <form action="" method="">
+          <label for="nama">Nama:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            required
+            class="rounded w-full"
+          /><br /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="rounded w-full"
+          /><br /><br />
+
+          <label for="pesan">Pesan:</label><br />
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            cols="50"
+            required
+            class="rounded w-full"
+          ></textarea
+          ><br /><br />
+
+          <input
+            type="submit"
+            value="Send"
+            class="text-white bg-gray-500/75 px-4 py-1 rounded-md hover:cursor-pointer hover:bg-gray-500 duration-200 ease-in-out"
+          />
+        </form>
+      </div>
+    </div>
+      <!-- Contact Me form end -->
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gradient-to-r from-slate-600 to-slate-800">
+    <!-- Navbar start -->
+    <div class="flex justify-between align-center px-7 py-3">
+      <div>
+        <button>
+          <h1
+            class="hover:text-slate-300 duration-150 ease-in-out text-xl font-semibold"
+          >
+            My Portfolio
+          </h1>
+        </button>
+      </div>
+      <div>
+        <ul class="flex gap-7">
+          <li class="hover:text-blue-300 ease-in-out duration-150">
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="hover:text-blue-300 ease-in-out duration-150 underline underline-offset-[4px] text-blue-300"
+          >
+            <a href="about.html">About</a>
+          </li>
+          <li class="hover:text-blue-300 ease-in-out duration-150">
+            <a href="contactMe.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Main start -->
+    <div class="flex justify-center mt-14 flex-col">
+      <div class="mb-14">
+        <h1 class="text-2xl aboutMe-font text-center">About Me</h1>
+      </div>
+      <div class="max-w-5xl m-auto px-5">
+        <p class="aboutMe-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tempora
+          quo impedit sint voluptates. Neque dicta dolorum in voluptate!
+          Laudantium itaque quas perferendis, quam totam tenetur eos dolor
+          deleniti non sit ab ad esse natus a labore modi. Quas, sed! Commodi
+          tempore iusto molestias architecto illum qui cumque consequatur
+          ratione laudantium fuga maxime at harum dolorum ea eos et iure quo
+          ducimus, mollitia adipisci saepe consectetur facilis unde corporis?
+          Est perferendis expedita saepe blanditiis eum, maiores asperiores,
+          voluptatibus nostrum ratione accusantium quae modi facere provident?
+          Culpa omnis quasi maxime neque explicabo alias, quis iure, quam
+          aspernatur tempore excepturi eum maiores ipsa sequi officia veritatis!
+          Est iste rem accusantium odio eius! Eos ex maiores facilis iure
+          numquam soluta voluptatum sunt quas sed modi ullam corrupti, quae
+          architecto dignissimos cum consequuntur exercitationem inventore optio
+          non pariatur. Repudiandae vel, optio assumenda aut eaque in natus
+          eligendi earum dicta. Molestias numquam aut explicabo impedit
+          consequuntur porro. Blanditiis vero est maiores, ab quisquam
+          asperiores ut. Sapiente iure, obcaecati cupiditate incidunt
+          praesentium quaerat ex reiciendis accusamus dicta suscipit eum
+          doloribus facere animi aliquid minima enim culpa explicabo,
+          repudiandae quos ea asperiores maiores placeat! Fugit iure
+          reprehenderit in. Eligendi inventore, illo dicta totam libero nulla
+          eveniet fugit sit facere, laboriosam autem ratione optio! Culpa
+          distinctio molestias sit. Corporis ut quae magnam ipsa rerum! Magni at
+          sunt dolorem facere libero neque nostrum error culpa ad accusamus
+          harum, vel nihil laudantium sapiente repellendus? Fuga nobis
+          consectetur doloremque veniam reiciendis quos. Sequi illo cum debitis
+          at accusamus perspiciatis, quis reprehenderit perferendis molestiae
+          eius explicabo, doloribus ex nulla incidunt architecto minima saepe
+          eum dolore tempora ipsum ea et tenetur assumenda. Nemo quas ipsa,
+          totam ipsam tempora consequatur eaque praesentium saepe numquam sed
+          libero laboriosam beatae dolor natus quos, rem placeat vel sint sit,
+          sequi alias recusandae quod harum quae. Ipsam, adipisci.
+        </p>
+      </div>
+    </div>
+    <!-- Main end -->
+
+    <script>
+      const title = document.querySelector(".aboutMe-font");
+      const paragraph = document.querySelector(".aboutMe-paragraph");
+
+      // Mendapatkan jumlah pixel yang telah digulir
+      function getScrollOffset() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+      }
+
+      // Menampilkan gambar saat pengguna menggulir sebanyak 360 pixel
+      function showImageOnScroll() {
+        const scrollOffset = getScrollOffset();
+
+        if (scrollOffset >= 0) {
+          title.classList.add("visible");
+        }
+        if (scrollOffset >= 0) {
+          paragraph.classList.add("visible");
+        }
+      }
+
+      // Menampilkan gambar saat memuat halaman jika pengguna sudah cukup menggulir
+      window.addEventListener("load", showImageOnScroll);
+
+      // Menampilkan gambar saat pengguna menggulir
+      window.addEventListener("scroll", showImageOnScroll);
+    </script>
+  </body>
+</html>
